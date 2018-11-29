@@ -50,7 +50,7 @@ copyright = u"2011 - 2017, Dan Crosta"
 # built documents.
 #
 # convert "x.y.z.devN" => "x.y"
-version = 2.2.0: November 1, 2018
+version = 2.2
 
 # The full version, including alpha/beta/rc tags.
 release = version
