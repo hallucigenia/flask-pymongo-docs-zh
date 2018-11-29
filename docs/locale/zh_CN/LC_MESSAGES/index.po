@@ -1,0 +1,922 @@
+# SOME DESCRIPTIVE TITLE.
+# Copyright (C) 2011 - 2017, Dan Crosta
+# This file is distributed under the same license as the Flask-PyMongo
+# package.
+# FIRST AUTHOR <EMAIL@ADDRESS>, 2018.
+#
+msgid ""
+msgstr ""
+"Project-Id-Version: Flask-PyMongo 2.2\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2018-11-28 12:20+0800\n"
+"PO-Revision-Date: 2018-11-29 21:17+0800\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Generated-By: Babel 2.6.0\n"
+"Last-Translator: \n"
+"Language-Team: \n"
+"Language: zh_CN\n"
+"X-Generator: Poedit 2.2\n"
+"Plural-Forms: nplurals=1; plural=0;\n"
+
+#: ../../index.rst:2
+msgid "Flask-PyMongo"
+msgstr "Flask-PyMongo"
+
+#: ../../index.rst:4
+msgid ""
+"`MongoDB <http://www.mongodb.org/>`_ is an open source database that stores "
+"flexible JSON-like \"documents,\" which can have any number, name, or hierarchy "
+"of fields within, instead of rows of data as in a relational database. Python "
+"developers can think of MongoDB as a persistent, searchable repository of "
+"Python dictionaries (and, in fact, this is how `PyMongo <http://api.mongodb.org/"
+"python/current/>`_ represents MongoDB documents)."
+msgstr ""
+"`MongoDB <http://www.mongodb.org/>`_  是一个开源数据库，它存储灵活，形式类似 "
+"JSON\" 文档 \"。与关系数据库中的数据行不同，其中可以包含任何数字、名称，或者复杂"
+"的层级结构。Python 开发人员可以将 MongoDB 视为一个持久化、可搜索的Python 字典存"
+"储库 (实际上, 这就是 `PyMongo <http://api.mongodb.org/python/current/>`_ 如何来"
+"表达 MongoDB 的文档的方式)。"
+
+#: ../../index.rst:11
+msgid ""
+"Flask-PyMongo bridges Flask and PyMongo and provides some convenience helpers."
+msgstr ""
+"拓展Flask-PyMongo 在 Flask 中集成了 PyMongo 并且增加了一些更为便利的帮助。"
+
+#: ../../index.rst:16
+msgid "Quickstart"
+msgstr "快速入门"
+
+#: ../../index.rst:18
+msgid "First, install Flask-PyMongo:"
+msgstr "首先，安装 Flask-PyMongo："
+
+#: ../../index.rst:24
+msgid "Next, add a :class:`~flask_pymongo.PyMongo` to your code:"
+msgstr "接下来,，在你的代码中添加一个 :class:`~flask_pymongo.PyMongo` :"
+
+#: ../../index.rst:35
+msgid ""
+":class:`~flask_pymongo.PyMongo` connects to the MongoDB server running on port "
+"27017 on localhost, to the database named ``myDatabase``. This database is "
+"exposed as the :attr:`~flask_pymongo.PyMongo.db` attribute."
+msgstr ""
+":class:`~flask_pymongo.PyMongo` 连接运行在本机上 27017 端口的 数据库名为 "
+"``myDatabase``. 的MongoDB 服务器，这个数据库显示为 :attr:`~flask_pymongo."
+"PyMongo.db` 属性。"
+
+#: ../../index.rst:39
+msgid "You can use :attr:`~flask_pymongo.PyMongo.db` directly in views:"
+msgstr "你可以直接在视图中使用 :attr:`~flask_pymongo.PyMongo.db` ："
+
+#: ../../index.rst:51
+msgid ""
+"Previous versions of Flask-PyMongo required that the MongoDB URI contained a "
+"database name; as of 2.2, this requirement is lifted. If there is no database "
+"name, the :attr:`~flask_pymongo.PyMongo.db` attribute will be ``None``."
+msgstr ""
+"Flask-PyMongo 的早期版本要求 MongoDB URI 包含一个数据库名称。自2.2 版本起， 这。"
+"如果没有数据库名称, 则 :attr:`~flask_pymongo.PyMongo.db` 属性将是 ``None`` 。"
+
+#: ../../index.rst:58
+msgid "Compatibility"
+msgstr "兼容性"
+
+#: ../../index.rst:60
+msgid ""
+"Flask-PyMongo depends on recent versions of Flask and PyMongo, where \"recent\" "
+"is defined to mean \"was released in the last 3 years\". Flask-PyMongo *may* "
+"work with older versions, but compatibility fixes for older versions will not "
+"be accepted, and future changes may break compatibility in older versions."
+msgstr ""
+"Flask-PyMongo依赖于最新版本的Flask和PyMongo，这里的“最近”意指“近三年”。Flask-"
+"PyMongo *可能* 适用于旧版本。但不接受旧版本的兼容性修补程序，并且未来的更新可能"
+"会破坏旧版本兼容性。"
+
+#: ../../index.rst:66
+msgid ""
+"Flask-PyMongo is tested against `supported versions <https://www.mongodb.com/"
+"support-policy>`_ of MongoDB, and Python 2.7 and 3.4+. For the exact list of "
+"version combinations that are tested and known to be compatible, see the "
+"`envlist` in `tox.ini <https://github.com/dcrosta/flask-pymongo/blob/master/tox."
+"ini>`_."
+msgstr ""
+"Flask-PyMongo 通过MongoDB `supported versions <https://www.mongodb.com/support-"
+"policy>`_ 版本测试，Python2.7和3.4+版本的测试。有关经过测试且已知兼容的版本组合"
+"的确切列表，在 `tox.ini <https://github.com/dcrosta/flask-pymongo/blob/master/"
+"tox.ini>`_访问 `envlist` 。"
+
+#: ../../index.rst:74
+msgid "Helpers"
+msgstr "帮助"
+
+#: ../../index.rst:76
+msgid "Flask-PyMongo provides helpers for some common tasks:"
+msgstr "Flask-PyMongo 为一些常见任务提供帮助："
+
+#: flask_pymongo.wrappers.Collection.find_one_or_404:1 of
+msgid "Find a single document or raise a 404."
+msgstr "找到单个文档或抛出404错误。"
+
+#: flask_pymongo.wrappers.Collection.find_one_or_404:3 of
+msgid ""
+"This is like :meth:`~pymongo.collection.Collection.find_one`, but rather than "
+"returning ``None``, cause a 404 Not Found HTTP status on the request."
+msgstr ""
+"这类似于 :meth:`~pymongo.collection.Collection.find_one` ，但并不返回 "
+"``None`` ，而是出现请求HTTP状态的404错误。"
+
+#: flask_pymongo.PyMongo.send_file:1 of
+msgid "Respond with a file from GridFS."
+msgstr "使用 GridFS 中的文件进行响应。"
+
+#: flask_pymongo.PyMongo.send_file:3 of
+msgid ""
+"Returns an instance of the :attr:`~flask.Flask.response_class` containing the "
+"named file, and implement conditional GET semantics (using :meth:`~werkzeug."
+"wrappers.ETagResponseMixin.make_conditional`)."
+msgstr ""
+"返回包含命名文件的 :attr:`~flask.Flask.response_class` 实例，并(使用 :meth:"
+"`~werkzeug.wrappers.ETagResponseMixin.make_conditional`)实现条件GET语义。"
+
+#: flask_pymongo.PyMongo.save_file flask_pymongo.PyMongo.send_file of
+msgid "参数"
+msgstr "参数"
+
+#: flask_pymongo.PyMongo.save_file:10 flask_pymongo.PyMongo.send_file:13 of
+msgid "the filename of the file to return"
+msgstr "要返回的文件的文件名"
+
+#: flask_pymongo.PyMongo.send_file:14 of
+msgid "the base name of the GridFS collections to use"
+msgstr "要使用的GridFS集合的基本名字"
+
+#: flask_pymongo.PyMongo.send_file:15 of
+msgid ""
+"if positive, return the Nth revision of the file identified by filename; if "
+"negative, return the Nth most recent revision. If no such version exists, "
+"return with HTTP status 404."
+msgstr ""
+"如果为是，则返回由文件名标识文件的第N个修订版；如果为否，则返回第N个最近版本。如"
+"果没有对应版本存在，返回HTTP的404 状态。"
+
+#: flask_pymongo.PyMongo.send_file:18 of
+msgid "number of seconds that browsers should be instructed to cache responses"
+msgstr "指示浏览器缓存响应的秒数"
+
+#: flask_pymongo.PyMongo.save_file:1 of
+msgid "Save a file-like object to GridFS using the given filename."
+msgstr "使用指定文件名将对象保存到GridFS。"
+
+#: flask_pymongo.PyMongo.save_file:11 of
+msgid "the file-like object to save"
+msgstr "要保存的对象"
+
+#: flask_pymongo.PyMongo.save_file:12 of
+msgid "base the base name of the GridFS collections to use"
+msgstr "基于要使用的GridFS集合的基本名称"
+
+#: flask_pymongo.PyMongo.save_file:13 of
+msgid ""
+"the MIME content-type of the file. If ``None``, the content-type is guessed "
+"from the filename using :func:`~mimetypes.guess_type`"
+msgstr ""
+"文件的MIME content-type。如果为 ``None`` ，将根据使用的文件名猜测 :func:"
+"`~mimetypes.guess_type`"
+
+#: flask_pymongo.PyMongo.save_file:16 of
+msgid ""
+"extra attributes to be stored in the file's document, passed directly to :meth:"
+"`gridfs.GridFS.put`"
+msgstr "要存储在文件文档中的额外参数，直接传递给 :meth:`gridfs.GridFS.put`"
+
+#: flask_pymongo.BSONObjectIdConverter:1 of
+msgid "A simple converter for the RESTful URL routing system of Flask."
+msgstr "一个用于Flask的RESTful URL路由系统的简单转换器。"
+
+#: flask_pymongo.BSONObjectIdConverter:10 of
+msgid ""
+"Valid object ID strings are converted into :class:`~bson.objectid.ObjectId` "
+"objects; invalid strings result in a 404 error. The converter is automatically "
+"registered by the initialization of :class:`~flask_pymongo.PyMongo` with "
+"keyword :attr:`ObjectId`."
+msgstr ""
+"有效的对象ID字符串转换为 :class:`~bson.objectid.ObjectId` 对象；无效的字符串会造"
+"成404错误。转换器通过初始化 :class:`~flask_pymongo.PyMongo` 与关键词 :attr:"
+"`ObjectId` 自动注册。"
+
+#: ../../index.rst:87
+msgid "Configuration"
+msgstr "配置"
+
+#: ../../index.rst:89
+msgid ""
+"You can configure Flask-PyMongo either by passing a `MongoDB URI <https://docs."
+"mongodb.com/manual/reference/connection-string/>`_ to the :class:"
+"`~flask_pymongo.PyMongo` constructor, or assigning it to the ``MONGO_URI`` "
+"`Flask configuration variable <http://flask.pocoo.org/docs/1.0/config/>`_"
+msgstr ""
+"你可以通过将 `MongoDB URI <https://docs.mongodb.com/manual/reference/connection-"
+"string/>`_ 传递给 :class:`~flask_pymongo.PyMongo` 构造函数，或将其分配给 "
+"``MONGO_URI`` ` Flask 配置变量 <http://flask.pocoo.org/docs/1.0/config/>`_ "
+
+#: ../../index.rst:95
+msgid ""
+"You may also pass additional keyword arguments to the ``PyMongo`` constructor. "
+"These are passed directly through to the underlying :class:`~pymongo."
+"mongo_client.MongoClient` object."
+msgstr ""
+"你还可以将其他关键字参数传递给 ``PyMongo`` 构造函数。它们直接传递给底层的 :"
+"class:`~pymongo.mongo_client.MongoClient` 对象。"
+
+#: ../../index.rst:101
+msgid ""
+"By default, Flask-PyMongo sets the ``connect`` keyword argument to ``False``, "
+"to prevent PyMongo from connecting immediately. PyMongo itself `is not fork-"
+"safe <http://api.mongodb.com/python/current/faq.html#is-pymongo-fork-safe>`_, "
+"and delaying connection until the app is actually used is necessary to avoid "
+"issues. If you wish to change this default behavior, pass ``connect=True`` as a "
+"keyword argument to ``PyMongo``."
+msgstr ""
+"默认情况下，Flask-PyMongo将 ``connect``  关键字参数设置为 ``False`` ，以防止"
+"PyMongo主动连接。 PyMongo本身是 `fork进程不安全 <http://api.mongodb.com/python/"
+"current/faq.html#is-pymongo-fork-safe>`_ 的，并且在实际使用应用程序之前延迟连接"
+"是必要的，以避免一些问题出现。 如果您希望更改此默认行为，请将 ``connect = "
+"True`` 作为关键字参数传递给 ``PyMongo`` 。"
+
+#: ../../index.rst:109
+msgid ""
+"You can create multiple ``PyMongo`` instances, to connect to multiple databases "
+"or database servers:"
+msgstr "您可以创建多个 ``PyMongo`` 实例，以连接多个数据库或数据库服务器："
+
+#: ../../index.rst:125
+msgid "Each instance is independent of the others and shares no state."
+msgstr "每个实例将独立于其他实例且不共享任何状态。"
+
+#: ../../index.rst:129
+msgid "API"
+msgstr "API"
+
+#: ../../index.rst:132
+msgid "Classes"
+msgstr "Classes"
+
+#: flask_pymongo.PyMongo:1 of
+msgid "Manages MongoDB connections for your Flask app."
+msgstr "管理Flask app的MongoDB连接。"
+
+#: flask_pymongo.PyMongo:3 of
+msgid ""
+"PyMongo objects provide access to the MongoDB server via the :attr:`db` and :"
+"attr:`cx` attributes. You must either pass the :class:`~flask.Flask` app to the "
+"constructor, or call :meth:`init_app`."
+msgstr ""
+"PyMongo对象通过 :attr:`db` 和 :attr:`cx` 属性来对MongoDB服务器进行访问。 你必须"
+"将 :class:`~flask.Flask` app传递给构造函数，或者调用 :meth:`init_app` 初始化。"
+
+#: flask_pymongo.PyMongo:7 of
+msgid ""
+"PyMongo accepts a MongoDB URI via the ``MONGO_URI`` Flask configuration "
+"variable, or as an argument to the constructor or ``init_app``. See :meth:"
+"`init_app` for more detail."
+msgstr ""
+"PyMongo通过Flask ``MONGO_URI`` 配置变量接受MongoDB URI，或者作为构造函数的参数，"
+"或是 ``init_app`` 的参数。 有关更多详细信息，请参阅 :meth:`init_app` 。"
+
+#: ../../index.rst:139
+msgid ""
+"The :class:`~flask_pymongo.wrappers.MongoClient` connected to the MongoDB "
+"server."
+msgstr ""
+":class:`~flask_pymongo.wrappers.MongoClient` Mongo客户端，连接到MongoDB服务器。"
+
+#: ../../index.rst:144
+msgid ""
+"The :class:`~flask_pymongo.wrappers.Database` if the URI used named a database, "
+"and ``None`` otherwise."
+msgstr ""
+" :class:`~flask_pymongo.wrappers.Database` 数据库，如果使用URI命名的数据库，否则"
+"为 ``None`` 。"
+
+#: flask_pymongo.PyMongo.init_app:1 of
+msgid "Initialize this :class:`PyMongo` for use."
+msgstr "初始化本 :class:`PyMongo` 以供使用。"
+
+#: flask_pymongo.PyMongo.init_app:3 of
+msgid ""
+"Configure a :class:`~pymongo.mongo_client.MongoClient` in the following "
+"scenarios:"
+msgstr "在以下场景中配置 :class:`~pymongo.mongo_client.MongoClient` ："
+
+#: flask_pymongo.PyMongo.init_app:6 of
+msgid ""
+"If ``uri`` is not ``None``, pass the ``uri`` and any positional or keyword "
+"arguments to :class:`~pymongo.mongo_client.MongoClient`"
+msgstr ""
+"如果 ``uri`` 不为 ``None`` ，则将 ``uri`` 和任何位置或关键字参数传递给 :class:"
+"`~pymongo.mongo_client.MongoClient`"
+
+#: flask_pymongo.PyMongo.init_app:8 of
+msgid ""
+"If ``uri`` is ``None``, and a Flask config variable named ``MONGO_URI`` exists, "
+"use that as the ``uri`` as above."
+msgstr ""
+"如果 ``uri`` 为 ``None`` ，并且存在名为 ``MONGO_URI`` 的Flask配置变量，则将其用"
+"作上面的 ``uri``。"
+
+#: flask_pymongo.PyMongo.init_app:11 of
+msgid ""
+"The caller is responsible for ensuring that additional positional and keyword "
+"arguments result in a valid call."
+msgstr "调用程序负责确保额外的位置和关键字参数产生有效的调用。"
+
+#: flask_pymongo.PyMongo.init_app:16 of
+msgid ""
+"The ``uri`` is no longer required to contain a database name. If it does not, "
+"then the :attr:`db` attribute will be ``None``."
+msgstr ""
+"不再需要 ``uri`` 来包含数据库名称。 如果没有 :attr:`db` 属性将为 ``None`` 。"
+
+#: flask_pymongo.PyMongo.init_app:21 of
+msgid ""
+"Flask-PyMongo no longer accepts many of the configuration variables it did in "
+"previous versions. You must now use a MongoDB URI to configure Flask-PyMongo."
+msgstr ""
+"Flask-PyMongo不再接受它在以前版本中所做的大部分配置变量。现在必须使用 MongoDB "
+"URI 来配置 Flask-PyMongo 。"
+
+#: ../../index.rst:149
+msgid "Wrappers"
+msgstr "Wrappers"
+
+#: ../../index.rst:151
+msgid ""
+"Flask-PyMongo wraps PyMongo's :class:`~pymongo.mongo_client.MongoClient`, :"
+"class:`~pymongo.database.Database`, and :class:`~pymongo.collection.Collection` "
+"classes, and overrides their attribute and item accessors. Wrapping the PyMongo "
+"classes in this way lets Flask-PyMongo add methods to ``Collection`` while "
+"allowing user code to use MongoDB-style dotted expressions."
+msgstr ""
+"Flask-PyMongo包装了PyMongo的类 :class:`~pymongo.mongo_client.MongoClient`, :"
+"class:`~pymongo.database.Database`, 和 :class:`~pymongo.collection.Collection` "
+"类，并覆盖它们的属性和项目访问器。 以这种方式包装 PyMongo 类让 Flask-PyMongo 将"
+"方法添加到 ``Collection`` ，同时允许用户在代码中使用 MongoDB 风格的点状表达式。"
+
+#: flask_pymongo.wrappers.Collection:1 of
+msgid "Sub-class of PyMongo :class:`~pymongo.collection.Collection` with helpers."
+msgstr "带帮助程序的  :class:`~pymongo.collection.Collection` 子类。"
+
+#: ../../index.rst:172
+msgid "History and Contributors"
+msgstr "更新历史与贡献者"
+
+#: ../../index.rst:174
+msgid "Changes:"
+msgstr "更改："
+
+#: ../../index.rst:176
+msgid "2.2.0: November 1, 2018"
+msgstr "2.2.0: November 1, 2018"
+
+#: ../../index.rst:178
+msgid ""
+"`#117 <https://github.com/dcrosta/flask-pymongo/pull/117>`_ Allow URIs without "
+"database name."
+msgstr ""
+"`#117 <https://github.com/dcrosta/flask-pymongo/pull/117>`_ 允许没有数据库名称的"
+"URI。"
+
+#: ../../index.rst:181
+msgid "2.1.0: August 6, 2018"
+msgstr "2.1.0: August 6, 2018"
+
+#: ../../index.rst:183
+msgid ""
+"`#114 <https://github.com/dcrosta/flask-pymongo/pull/114>`_ Accept keyword "
+"arguments to :meth:`~flask_pymongo.PyMongo.save_file` (Andrew C. Hawkins)."
+msgstr ""
+"`#114 <https://github.com/dcrosta/flask-pymongo/pull/114>`_ 接受 :meth:"
+"`~flask_pymongo.PyMongo.save_file` 的关键词参数(Andrew C. Hawkins)。"
+
+#: ../../index.rst:187
+msgid "2.0.1: July 17, 2018"
+msgstr "2.0.1: July 17, 2018"
+
+#: ../../index.rst:189
+msgid ""
+"`#113 <https://github.com/dcrosta/flask-pymongo/pull/113>`_ Make the ``app`` "
+"argument to ``PyMongo`` optional (yarobob)."
+msgstr ""
+"`#113 <https://github.com/dcrosta/flask-pymongo/pull/113>`_ 使 ``PyMongo`` 的 "
+"``app`` 参数成为可选项 (yarobob)。"
+
+#: ../../index.rst:192
+msgid "2.0.0: July 2, 2018"
+msgstr "2.0.0: July 2, 2018"
+
+#: ../../index.rst:194
+msgid ""
+"**This release is not compatible with Flask-PyMongo 0.5.x or any earlier "
+"version.** You can see an explanation of the reasoning and changes in `issue "
+"#110 <https://github.com/dcrosta/flask-pymongo/issues/110>`_."
+msgstr ""
+"**此版本与Flask-PyMongo 0.5.x或任何早期版本不兼容。** 你可以在 `issue #110 "
+"<https://github.com/dcrosta/flask-pymongo/issues/110>`_  中查看原因和更改的解"
+"释 。"
+
+#: ../../index.rst:198
+msgid "Only support configuration via URI."
+msgstr "Only support configuration via URI."
+
+#: ../../index.rst:199
+msgid "Don't connect to MongoDB by default."
+msgstr "Don't connect to MongoDB by default."
+
+#: ../../index.rst:200
+msgid "Clarify version support of Python, Flask, PyMongo, and MongoDB."
+msgstr "Clarify version support of Python, Flask, PyMongo, and MongoDB."
+
+#: ../../index.rst:201
+msgid "Readability improvement to ``README.md`` (MinJae Kwon)."
+msgstr "Readability improvement to ``README.md`` (MinJae Kwon)."
+
+#: ../../index.rst:203
+msgid "0.5.2: May 19, 2018"
+msgstr "0.5.2: May 19, 2018"
+
+#: ../../index.rst:205
+msgid ""
+"`#102 <https://github.com/dcrosta/flask-pymongo/pull/102>`_ Return 404, not "
+"400, when given an invalid input to `BSONObjectIdConverter` (Abraham Toriz "
+"Cruz)."
+msgstr ""
+"`#102 <https://github.com/dcrosta/flask-pymongo/pull/102>`_ Return 404, not "
+"400, when given an invalid input to `BSONObjectIdConverter` (Abraham Toriz "
+"Cruz)."
+
+#: ../../index.rst:209
+msgid "0.5.1: May 24, 2017"
+msgstr "0.5.1: May 24, 2017"
+
+#: ../../index.rst:211
+msgid ""
+"`#93 <https://github.com/dcrosta/flask-pymongo/pull/93>`_ Supply a default "
+"``MONGO_AUTH_MECHANISM`` (Mark Unsworth)."
+msgstr ""
+"`#93 <https://github.com/dcrosta/flask-pymongo/pull/93>`_ Supply a default "
+"``MONGO_AUTH_MECHANISM`` (Mark Unsworth)."
+
+#: ../../index.rst:214
+msgid "0.5.0: May 21, 2017"
+msgstr "0.5.0: May 21, 2017"
+
+#: ../../index.rst:216
+msgid ""
+"**This will be the last 0.x series release.** The next non-bugfix release will "
+"be Flask-PyMongo 2.0, which will introduce backwards breaking changes, and will "
+"be the foundation for improvements and changes going forward. Flask-PyMongo 2.0 "
+"will no longer support Python 2.6, but will support Python 2.7 and Python 3.3+."
+msgstr ""
+"**This will be the last 0.x series release.** The next non-bugfix release will "
+"be Flask-PyMongo 2.0, which will introduce backwards breaking changes, and will "
+"be the foundation for improvements and changes going forward. Flask-PyMongo 2.0 "
+"will no longer support Python 2.6, but will support Python 2.7 and Python 3.3+."
+
+#: ../../index.rst:222
+msgid ""
+"`#44 <https://github.com/dcrosta/flask-pymongo/issues/44>`_, `#51 <https://"
+"github.com/dcrosta/flask-pymongo/pull/51>`_ Redirect ``/`` to ``/HomePage`` in "
+"the wiki example (David Awad)"
+msgstr ""
+"`#44 <https://github.com/dcrosta/flask-pymongo/issues/44>`_, `#51 <https://"
+"github.com/dcrosta/flask-pymongo/pull/51>`_ Redirect ``/`` to ``/HomePage`` in "
+"the wiki example (David Awad)"
+
+#: ../../index.rst:225
+msgid ""
+"`#76 <https://github.com/dcrosta/flask-pymongo/pull/76>`_ Build on more modern "
+"Python versions (Robson Roberto Souza Peixoto)"
+msgstr ""
+"`#76 <https://github.com/dcrosta/flask-pymongo/pull/76>`_ Build on more modern "
+"Python versions (Robson Roberto Souza Peixoto)"
+
+#: ../../index.rst:227
+msgid ""
+"`#79 <https://github.com/dcrosta/flask-pymongo/pull/79>`_, `#84 <https://github."
+"com/dcrosta/flask-pymongo/issues/84>`_, `#85 <https://github.com/dcrosta/flask-"
+"pymongo/pull/85>`_ Don't use ``flask.ext`` import paths any more (ratson, "
+"juliascript)"
+msgstr ""
+"`#79 <https://github.com/dcrosta/flask-pymongo/pull/79>`_, `#84 <https://github."
+"com/dcrosta/flask-pymongo/issues/84>`_, `#85 <https://github.com/dcrosta/flask-"
+"pymongo/pull/85>`_ Don't use ``flask.ext`` import paths any more (ratson, "
+"juliascript)"
+
+#: ../../index.rst:231
+msgid ""
+"`#40 <https://github.com/dcrosta/flask-pymongo/issues/40>`_, `#83 <https://"
+"github.com/dcrosta/flask-pymongo/pull/83>`_, `#86 <https://github.com/dcrosta/"
+"flask-pymongo/pull/86>`_ Fix options parsing from ``MONGO_URI`` (jobou)"
+msgstr ""
+"`#40 <https://github.com/dcrosta/flask-pymongo/issues/40>`_, `#83 <https://"
+"github.com/dcrosta/flask-pymongo/pull/83>`_, `#86 <https://github.com/dcrosta/"
+"flask-pymongo/pull/86>`_ Fix options parsing from ``MONGO_URI`` (jobou)"
+
+#: ../../index.rst:235
+msgid ""
+"`#72 <https://github.com/dcrosta/flask-pymongo/issues/72>`_, `#80 <https://"
+"github.com/dcrosta/flask-pymongo/pull/80>`_ Support "
+"``MONGO_SERVER_SELECTION_TIMEOUT_MS`` (Henrik Blidh)"
+msgstr ""
+"`#72 <https://github.com/dcrosta/flask-pymongo/issues/72>`_, `#80 <https://"
+"github.com/dcrosta/flask-pymongo/pull/80>`_ Support "
+"``MONGO_SERVER_SELECTION_TIMEOUT_MS`` (Henrik Blidh)"
+
+#: ../../index.rst:238
+msgid ""
+"`#34 <https://github.com/dcrosta/flask-pymongo/issues/34>`_, `#64 <https://"
+"github.com/dcrosta/flask-pymongo/pull/64>`_, `#88 <https://github.com/dcrosta/"
+"flask-pymongo/pull/88>`_ Support from ``MONGO_AUTH_SOURCE`` and "
+"``MONGO_AUTH_MECHANISM`` (Craig Davis)"
+msgstr ""
+"`#34 <https://github.com/dcrosta/flask-pymongo/issues/34>`_, `#64 <https://"
+"github.com/dcrosta/flask-pymongo/pull/64>`_, `#88 <https://github.com/dcrosta/"
+"flask-pymongo/pull/88>`_ Support from ``MONGO_AUTH_SOURCE`` and "
+"``MONGO_AUTH_MECHANISM`` (Craig Davis)"
+
+#: ../../index.rst:242
+msgid ""
+"`#74 <https://github.com/dcrosta/flask-pymongo/issues/74>`_, `#77 <https://"
+"github.com/dcrosta/flask-pymongo/issues/77>`_, `#78 <https://github.com/dcrosta/"
+"flask-pymongo/pull/78>`_ Fixed ``maxPoolSize`` in PyMongo 3.0+ (Henrik Blidh)"
+msgstr ""
+"`#74 <https://github.com/dcrosta/flask-pymongo/issues/74>`_, `#77 <https://"
+"github.com/dcrosta/flask-pymongo/issues/77>`_, `#78 <https://github.com/dcrosta/"
+"flask-pymongo/pull/78>`_ Fixed ``maxPoolSize`` in PyMongo 3.0+ (Henrik Blidh)"
+
+#: ../../index.rst:246
+msgid ""
+"`#82 <https://github.com/dcrosta/flask-pymongo/issues/82>`_ Fix \"another user "
+"is already authenticated\" error message."
+msgstr ""
+"`#82 <https://github.com/dcrosta/flask-pymongo/issues/82>`_ Fix \"another user "
+"is already authenticated\" error message."
+
+#: ../../index.rst:248
+msgid ""
+"`#54 <https://github.com/dcrosta/flask-pymongo/issues/54>`_ Authenticate "
+"against \"admin\" database if no ``MONGO_DBNAME`` is provided."
+msgstr ""
+"`#54 <https://github.com/dcrosta/flask-pymongo/issues/54>`_ Authenticate "
+"against \"admin\" database if no ``MONGO_DBNAME`` is provided."
+
+#: ../../index.rst:251
+msgid "0.4.1: January 25, 2016"
+msgstr "0.4.1: January 25, 2016"
+
+#: ../../index.rst:253
+msgid ""
+"Add the connect keyword: `#67 <https://github.com/dcrosta/flask-pymongo/"
+"pull/67>`_."
+msgstr ""
+"Add the connect keyword: `#67 <https://github.com/dcrosta/flask-pymongo/"
+"pull/67>`_."
+
+#: ../../index.rst:256
+msgid "0.4.0: October 19, 2015"
+msgstr "0.4.0: October 19, 2015"
+
+#: ../../index.rst:258
+msgid ""
+"Flask-Pymongo is now compatible with pymongo 3.0+: `#63 <https://github.com/"
+"dcrosta/flask-pymongo/pull/63>`_."
+msgstr ""
+"Flask-Pymongo is now compatible with pymongo 3.0+: `#63 <https://github.com/"
+"dcrosta/flask-pymongo/pull/63>`_."
+
+#: ../../index.rst:261
+msgid "0.3.1: April 9, 2015"
+msgstr "0.3.1: April 9, 2015"
+
+#: ../../index.rst:263
+msgid "Flask-PyMongo is now tested against Python 2.6, 2.7, 3.3, and 3.4."
+msgstr "Flask-PyMongo is now tested against Python 2.6, 2.7, 3.3, and 3.4."
+
+#: ../../index.rst:264
+msgid ""
+"Flask-PyMongo installation now no longer depends on `nose <https://pypi.python."
+"org/pypi/nose/>`_."
+msgstr ""
+"Flask-PyMongo installation now no longer depends on `nose <https://pypi.python."
+"org/pypi/nose/>`_."
+
+#: ../../index.rst:266
+msgid ""
+"`#58 <https://github.com/dcrosta/flask-pymongo/pull/58>`_ Update requirements "
+"for PyMongo 3.x (Emmanuel Valette)."
+msgstr ""
+"`#58 <https://github.com/dcrosta/flask-pymongo/pull/58>`_ Update requirements "
+"for PyMongo 3.x (Emmanuel Valette)."
+
+#: ../../index.rst:268
+msgid ""
+"`#43 <https://github.com/dcrosta/flask-pymongo/pull/43>`_ Ensure error is "
+"raised when URI database name is parsed as 'None' (Ben Jeffrey)."
+msgstr ""
+"`#43 <https://github.com/dcrosta/flask-pymongo/pull/43>`_ Ensure error is "
+"raised when URI database name is parsed as 'None' (Ben Jeffrey)."
+
+#: ../../index.rst:270
+msgid ""
+"`#50 <https://github.com/dcrosta/flask-pymongo/pull/50>`_ Fix a bug in read "
+"preference handling (Kevin Funk)."
+msgstr ""
+"`#50 <https://github.com/dcrosta/flask-pymongo/pull/50>`_ Fix a bug in read "
+"preference handling (Kevin Funk)."
+
+#: ../../index.rst:272
+msgid ""
+"`#46 <https://github.com/dcrosta/flask-pymongo/issues/46>`_ Cannot use multiple "
+"replicaset instances which run on different ports (Mark Unsworth)."
+msgstr ""
+"`#46 <https://github.com/dcrosta/flask-pymongo/issues/46>`_ Cannot use multiple "
+"replicaset instances which run on different ports (Mark Unsworth)."
+
+#: ../../index.rst:275
+msgid ""
+"`#30 <https://github.com/dcrosta/flask-pymongo/issues/30>`_ ConfiguationError "
+"with MONGO_READ_PREFERENCE (Mark Unsworth)."
+msgstr ""
+"`#30 <https://github.com/dcrosta/flask-pymongo/issues/30>`_ ConfiguationError "
+"with MONGO_READ_PREFERENCE (Mark Unsworth)."
+
+#: ../../index.rst:278
+msgid "0.3.0: July 4, 2013"
+msgstr "0.3.0: July 4, 2013"
+
+#: ../../index.rst:280
+msgid ""
+"This is a minor version bump which introduces backwards breaking changes! "
+"Please read these change notes carefully."
+msgstr ""
+"This is a minor version bump which introduces backwards breaking changes! "
+"Please read these change notes carefully."
+
+#: ../../index.rst:282
+msgid ""
+"Removed read preference constants from Flask-PyMongo; to set a read preference, "
+"use the string name or import contants directly from :class:`pymongo."
+"read_preferences.ReadPreference`."
+msgstr ""
+"Removed read preference constants from Flask-PyMongo; to set a read preference, "
+"use the string name or import contants directly from :class:`pymongo."
+"read_preferences.ReadPreference`."
+
+#: ../../index.rst:285
+msgid ""
+"`#22 (partial) <https://github.com/dcrosta/flask-pymongo/pull/22>`_ Add support "
+"for ``MONGO_SOCKET_TIMEOUT_MS`` and ``MONGO_CONNECT_TIMEOUT_MS`` options "
+"(ultrabug)."
+msgstr ""
+"`#22 (partial) <https://github.com/dcrosta/flask-pymongo/pull/22>`_ Add support "
+"for ``MONGO_SOCKET_TIMEOUT_MS`` and ``MONGO_CONNECT_TIMEOUT_MS`` options "
+"(ultrabug)."
+
+#: ../../index.rst:288
+msgid ""
+"`#27 (partial) <https://github.com/dcrosta/flask-pymongo/pull/27>`_ Make Flask-"
+"PyMongo compatible with Python 3 (Vizzy)."
+msgstr ""
+"`#27 (partial) <https://github.com/dcrosta/flask-pymongo/pull/27>`_ Make Flask-"
+"PyMongo compatible with Python 3 (Vizzy)."
+
+#: ../../index.rst:291
+msgid "0.2.1: December 22, 2012"
+msgstr "0.2.1: December 22, 2012"
+
+#: ../../index.rst:293
+msgid ""
+"`#19 <https://github.com/dcrosta/flask-pymongo/pull/19>`_ Added "
+"``MONGO_DOCUMENT_CLASS`` config option (jeverling)."
+msgstr ""
+"`#19 <https://github.com/dcrosta/flask-pymongo/pull/19>`_ Added "
+"``MONGO_DOCUMENT_CLASS`` config option (jeverling)."
+
+#: ../../index.rst:296
+msgid "0.2.0: December 15, 2012"
+msgstr "0.2.0: December 15, 2012"
+
+#: ../../index.rst:298
+msgid ""
+"This is a minor version bump which may introduce backwards breaking changes! "
+"Please read these change notes carefully."
+msgstr ""
+"This is a minor version bump which may introduce backwards breaking changes! "
+"Please read these change notes carefully."
+
+#: ../../index.rst:300
+msgid ""
+"`#17 <https://github.com/dcrosta/flask-pymongo/pull/17>`_ Now using PyMongo "
+"2.4's ``MongoClient`` and ``MongoReplicaSetClient`` objects instead of "
+"``Connection`` and ``ReplicaSetConnection`` classes (tang0th)."
+msgstr ""
+"`#17 <https://github.com/dcrosta/flask-pymongo/pull/17>`_ Now using PyMongo "
+"2.4's ``MongoClient`` and ``MongoReplicaSetClient`` objects instead of "
+"``Connection`` and ``ReplicaSetConnection`` classes (tang0th)."
+
+#: ../../index.rst:304
+msgid ""
+"`#17 <https://github.com/dcrosta/flask-pymongo/pull/17>`_ Now requiring at "
+"least PyMongo version 2.4 (tang0th)."
+msgstr ""
+"`#17 <https://github.com/dcrosta/flask-pymongo/pull/17>`_ Now requiring at "
+"least PyMongo version 2.4 (tang0th)."
+
+#: ../../index.rst:306
+msgid ""
+"`#17 <https://github.com/dcrosta/flask-pymongo/pull/17>`_ The wrapper class "
+"``flask_pymongo.wrappers.Connection`` is renamed to ``flask_pymongo.wrappers."
+"MongoClient`` (tang0th)."
+msgstr ""
+"`#17 <https://github.com/dcrosta/flask-pymongo/pull/17>`_ The wrapper class "
+"``flask_pymongo.wrappers.Connection`` is renamed to ``flask_pymongo.wrappers."
+"MongoClient`` (tang0th)."
+
+#: ../../index.rst:309
+msgid ""
+"`#17 <https://github.com/dcrosta/flask-pymongo/pull/17>`_ The wrapper class "
+"``flask_pymongo.wrappers.ReplicaSetConnection`` is renamed to ``flask_pymongo."
+"wrappers.MongoReplicaSetClient`` (tang0th)."
+msgstr ""
+"`#17 <https://github.com/dcrosta/flask-pymongo/pull/17>`_ The wrapper class "
+"``flask_pymongo.wrappers.ReplicaSetConnection`` is renamed to ``flask_pymongo."
+"wrappers.MongoReplicaSetClient`` (tang0th)."
+
+#: ../../index.rst:312
+msgid ""
+"`#18 <https://github.com/dcrosta/flask-pymongo/issues/18>`_ "
+"``MONGO_AUTO_START_REQUEST`` now defaults to ``False`` when connecting using a "
+"URI."
+msgstr ""
+"`#18 <https://github.com/dcrosta/flask-pymongo/issues/18>`_ "
+"``MONGO_AUTO_START_REQUEST`` now defaults to ``False`` when connecting using a "
+"URI."
+
+#: ../../index.rst:316
+msgid "0.1.4: December 15, 2012"
+msgstr "0.1.4: December 15, 2012"
+
+#: ../../index.rst:318
+msgid ""
+"`#15 <https://github.com/dcrosta/flask-pymongo/pull/15>`_ Added support for "
+"``MONGO_MAX_POOL_SIZE`` (Fabrice Aneche)"
+msgstr ""
+"`#15 <https://github.com/dcrosta/flask-pymongo/pull/15>`_ Added support for "
+"``MONGO_MAX_POOL_SIZE`` (Fabrice Aneche)"
+
+#: ../../index.rst:321
+msgid "0.1.3: September 22, 2012"
+msgstr "0.1.3: September 22, 2012"
+
+#: ../../index.rst:323
+msgid "Added support for configuration from MongoDB URI."
+msgstr "Added support for configuration from MongoDB URI."
+
+#: ../../index.rst:325
+msgid "0.1.2: June 18, 2012"
+msgstr "0.1.2: June 18, 2012"
+
+#: ../../index.rst:327
+msgid "Updated wiki example application"
+msgstr "Updated wiki example application"
+
+#: ../../index.rst:328
+msgid ""
+"`#14 <https://github.com/dcrosta/flask-pymongo/issues/14>`_ Added examples and "
+"docs to PyPI package."
+msgstr ""
+"`#14 <https://github.com/dcrosta/flask-pymongo/issues/14>`_ Added examples and "
+"docs to PyPI package."
+
+#: ../../index.rst:331
+msgid "0.1.1: May 26, 2012"
+msgstr "0.1.1: May 26, 2012"
+
+#: ../../index.rst:333
+msgid ""
+"Added support for PyMongo 2.2's \"auto start request\" feature, by way of the "
+"``MONGO_AUTO_START_REQUEST`` configuration flag."
+msgstr ""
+"Added support for PyMongo 2.2's \"auto start request\" feature, by way of the "
+"``MONGO_AUTO_START_REQUEST`` configuration flag."
+
+#: ../../index.rst:335
+msgid ""
+"`#13 <https://github.com/dcrosta/flask-pymongo/pull/13>`_ Added "
+"BSONObjectIdConverter (Christoph Herr)"
+msgstr ""
+"`#13 <https://github.com/dcrosta/flask-pymongo/pull/13>`_ Added "
+"BSONObjectIdConverter (Christoph Herr)"
+
+#: ../../index.rst:337
+msgid ""
+"`#12 <https://github.com/dcrosta/flask-pymongo/pull/12>`_ Corrected "
+"documentation typo (Thor Adam)"
+msgstr ""
+"`#12 <https://github.com/dcrosta/flask-pymongo/pull/12>`_ Corrected "
+"documentation typo (Thor Adam)"
+
+#: ../../index.rst:340
+msgid "0.1: December 21, 2011"
+msgstr "0.1: December 21, 2011"
+
+#: ../../index.rst:342
+msgid "Initial Release"
+msgstr "Initial Release"
+
+#: ../../index.rst:345
+msgid "Contributors:"
+msgstr "Contributors:"
+
+#: ../../index.rst:347
+msgid "`jeverling <https://github.com/jeverling>`_"
+msgstr "`jeverling <https://github.com/jeverling>`_"
+
+#: ../../index.rst:348
+msgid "`tang0th <https://github.com/tang0th>`_"
+msgstr "`tang0th <https://github.com/tang0th>`_"
+
+#: ../../index.rst:349
+msgid "`Fabrice Aneche <https://github.com/akhenakh>`_"
+msgstr "`Fabrice Aneche <https://github.com/akhenakh>`_"
+
+#: ../../index.rst:350
+msgid "`Thor Adam <https://github.com/thoradam>`_"
+msgstr "`Thor Adam <https://github.com/thoradam>`_"
+
+#: ../../index.rst:351
+msgid "`Christoph Herr <https://github.com/jarus>`_"
+msgstr "`Christoph Herr <https://github.com/jarus>`_"
+
+#: ../../index.rst:352
+msgid "`Mark Unsworth <https://github.com/markunsworth>`_"
+msgstr "`Mark Unsworth <https://github.com/markunsworth>`_"
+
+#: ../../index.rst:353
+msgid "`Kevin Funk <https://github.com/k-funk>`_"
+msgstr "`Kevin Funk <https://github.com/k-funk>`_"
+
+#: ../../index.rst:354
+msgid "`Ben Jeffrey <https://github.com/jeffbr13>`_"
+msgstr "`Ben Jeffrey <https://github.com/jeffbr13>`_"
+
+#: ../../index.rst:355
+msgid "`Emmanuel Valette <https://github.com/karec>`_"
+msgstr "`Emmanuel Valette <https://github.com/karec>`_"
+
+#: ../../index.rst:356
+msgid "`David Awad <https://github.com/DavidAwad>`_"
+msgstr "`David Awad <https://github.com/DavidAwad>`_"
+
+#: ../../index.rst:357
+msgid "`Robson Roberto Souza Peixoto <https://github.com/robsonpeixoto>`_"
+msgstr "`Robson Roberto Souza Peixoto <https://github.com/robsonpeixoto>`_"
+
+#: ../../index.rst:358
+msgid "`juliascript <https://github.com/juliascript>`_"
+msgstr "`juliascript <https://github.com/juliascript>`_"
+
+#: ../../index.rst:359
+msgid "`Henrik Blidh <https://github.com/hbldh>`_"
+msgstr "`Henrik Blidh <https://github.com/hbldh>`_"
+
+#: ../../index.rst:360
+msgid "`jobou <https://github.com/jbouzekri>`_"
+msgstr "`jobou <https://github.com/jbouzekri>`_"
+
+#: ../../index.rst:361
+msgid "`Craig Davis <https://github.com/blade2005>`_"
+msgstr "`Craig Davis <https://github.com/blade2005>`_"
+
+#: ../../index.rst:362
+msgid "`ratson <https://github.com/ratson>`_"
+msgstr "`ratson <https://github.com/ratson>`_"
+
+#: ../../index.rst:363
+msgid "`Abraham Toriz Cruz <https://github.com/categulario>`_"
+msgstr "`Abraham Toriz Cruz <https://github.com/categulario>`_"
+
+#: ../../index.rst:364
+msgid "`MinJae Kwon <https://github.com/mingrammer>`_"
+msgstr "`MinJae Kwon <https://github.com/mingrammer>`_"
+
+#: ../../index.rst:365
+msgid "`yarobob <https://github.com/yarobob>`_"
+msgstr "`yarobob <https://github.com/yarobob>`_"
+
+#: ../../index.rst:366
+msgid "`Andrew C. Hawkins <https://github.com/achawkins>`_"
+msgstr "`Andrew C. Hawkins <https://github.com/achawkins>`_"
