@@ -6,7 +6,7 @@
   <head>
     <meta http-equiv="X-UA-Compatible" content="IE=Edge" />
     <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
-    <title>Flask-PyMongo &#8212; Flask-PyMongo 2.2.0 文档</title>
+    <title>Flask-PyMongo &#8212; Flask-PyMongo 2.2 文档</title>
     <link rel="stylesheet" href="_static/flasky.css" type="text/css" />
     <link rel="stylesheet" href="_static/pygments.css" type="text/css" />
     <script type="text/javascript" id="documentation_options" data-url_root="./" src="_static/documentation_options.js"></script>
@@ -64,7 +64,7 @@
 <div class="section" id="compatibility">
 <h2>兼容性<a class="headerlink" href="#compatibility" title="永久链接至标题">¶</a></h2>
 <p>Flask-PyMongo依赖于最新版本的Flask和PyMongo，这里的“最近”意指“近三年”。Flask-PyMongo <em>可能</em> 适用于旧版本。但不接受旧版本的兼容性修补程序，并且未来的更新可能会破坏旧版本兼容性。</p>
-<p>Flask-PyMongo 通过MongoDB <a class="reference external" href="https://www.mongodb.com/support-policy">supported versions</a> 版本测试，Python2.7和3.4+版本的测试。有关经过测试且已知兼容的版本组合的确切列表，在 <cite>tox.ini &lt;https://github.com/dcrosta/flask-pymongo/blob/master/tox.ini&gt;`_访问 `envlist</cite> 。</p>
+<p>Flask-PyMongo 通过MongoDB <a class="reference external" href="https://www.mongodb.com/support-policy">支持的版本</a> 测试，Python2.7和3.4+版本的测试。有关经过测试且已知兼容的版本组合的确切列表，在 <a class="reference external" href="https://github.com/dcrosta/flask-pymongo/blob/master/tox.ini">tox.ini</a>.访问 <cite>envlist</cite> 。</p>
 </div>
 <div class="section" id="helpers">
 <h2>帮助<a class="headerlink" href="#helpers" title="永久链接至标题">¶</a></h2>
@@ -152,7 +152,7 @@
 </div>
 <div class="section" id="configuration">
 <h2>配置<a class="headerlink" href="#configuration" title="永久链接至标题">¶</a></h2>
-<p>你可以通过将 <a class="reference external" href="https://docs.mongodb.com/manual/reference/connection-string/">MongoDB URI</a> 传递给 <a class="reference internal" href="#flask_pymongo.PyMongo" title="flask_pymongo.PyMongo"><code class="xref py py-class docutils literal notranslate"><span class="pre">PyMongo</span></code></a> 构造函数，或将其分配给 <code class="docutils literal notranslate"><span class="pre">MONGO_URI</span></code> ` Flask 配置变量 &lt;<a class="reference external" href="http://flask.pocoo.org/docs/1.0/config/">http://flask.pocoo.org/docs/1.0/config/</a>&gt;`_</p>
+<p>你可以通过将 <a class="reference external" href="https://docs.mongodb.com/manual/reference/connection-string/">MongoDB URI</a> 传递给 <a class="reference internal" href="#flask_pymongo.PyMongo" title="flask_pymongo.PyMongo"><code class="xref py py-class docutils literal notranslate"><span class="pre">PyMongo</span></code></a> 构造函数，或将其分配给 <code class="docutils literal notranslate"><span class="pre">MONGO_URI</span></code> <a class="reference external" href="http://flask.pocoo.org/docs/1.0/config/">Flask 配置变量</a></p>
 <p>你还可以将其他关键字参数传递给 <code class="docutils literal notranslate"><span class="pre">PyMongo</span></code> 构造函数。它们直接传递给底层的 <a class="reference external" href="http://api.mongodb.com/python/current/api/pymongo/mongo_client.html#pymongo.mongo_client.MongoClient" title="(在 PyMongo v3.7.2)"><code class="xref py py-class docutils literal notranslate"><span class="pre">MongoClient</span></code></a> 对象。</p>
 <div class="admonition note">
 <p class="first admonition-title">注解</p>
